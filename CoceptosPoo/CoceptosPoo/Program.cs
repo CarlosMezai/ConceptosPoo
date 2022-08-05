@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace CoceptosPoo
 {
@@ -22,7 +22,7 @@ namespace CoceptosPoo
 
             };
 
-            Console.WriteLine(employee1);
+            //Console.WriteLine(employee1);
 
             Employee employee2 = new CommissionEmployee()
             {
@@ -37,7 +37,7 @@ namespace CoceptosPoo
 
             };
 
-            Console.WriteLine(employee2);
+            //Console.WriteLine(employee2);
 
             Employee employee3 = new HouryEmployee()
             {
@@ -52,7 +52,61 @@ namespace CoceptosPoo
 
             };
 
-            Console.WriteLine(employee3);
+            //Console.WriteLine(employee3);
+
+            Employee employee4 = new BaseCommissionEmployee()
+            {
+                Id = 1004,
+                FirstName = "Yazmin",
+                LastName = "Acero",
+                BirthDate = new Date(1970, 06, 26),
+                HiringDate = new Date(2020, 01, 01),
+                IsActive = true,
+                Base = 1000000.45M,
+                Sales = 40000000M,
+                CommissionPercentaje = 0.015F
+            };
+
+
+            ICollection<Employee> employees = new List<Employee>()
+            {
+                employee1, employee2, employee3, employee4
+            };
+
+            decimal payroll = 0;
+
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(employee);
+                payroll += employee.GetValueToPay();
+            }
+            Console.WriteLine("                               =================");
+            Console.WriteLine($"TOTAL                            {$"{payroll:C2}",15}");
+
+
+            Invoice invoice1 = new Invoice()
+            {
+                Description = "Cel Xiaomi A10",
+                Id = 1,
+                Price = 800000M,
+                Quantity = 5
+            };
+
+            Invoice invoice2 = new Invoice()
+            {
+                Description = "Samsung A32",
+                Id = 2,
+                Price = 10000000M,
+                Quantity = 7
+            };
+
+            Console.WriteLine(invoice1);
+            Console.WriteLine(invoice2);
+
+
+
+
+            //Console.WriteLine(employee4);
             //Date date1 = new Date(2022, 08, 02);
             //try
             //{
