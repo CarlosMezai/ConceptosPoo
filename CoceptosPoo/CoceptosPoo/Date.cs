@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoceptosPoo
 {
-    class Date
+    public class Date
     {
         private int _year;
         private int _month;
@@ -20,7 +20,7 @@ namespace CoceptosPoo
 
         }
 
-        private int CheckDay(int year, int month, int day)
+        public int CheckDay(int year, int month, int day)
         {
             if (month == 2 && day == 29 && isLeapYear(year))
             {
