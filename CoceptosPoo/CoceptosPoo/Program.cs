@@ -69,7 +69,7 @@ namespace CoceptosPoo
             //    Console.WriteLine(error.Message);
 
             //}
-               // Console.WriteLine(error.Message);
+                Console.WriteLine(error.Message);
              
             }
 =======
