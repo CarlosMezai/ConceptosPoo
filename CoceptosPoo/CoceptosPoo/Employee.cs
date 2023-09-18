@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace CoceptosPoo
+﻿namespace CoceptosPoo
 {
     public abstract class Employee
     {
@@ -26,7 +21,7 @@ namespace CoceptosPoo
         public override string ToString()
         {
             return $"{Id} - {FirstName} - {LastName} -, Birth: {BirthDate}, Hiring: {HiringDate}, Is active: {IsActive}";
-        }   
+        }
 
     }
 }
